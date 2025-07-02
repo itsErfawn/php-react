@@ -1,10 +1,12 @@
 <?php
-require __DIR__ . "/app/Controllers/HomeController.php";
-require __DIR__ . "/app/Controllers/AboutController.php";
+
 use App\Controllers\AboutController;
 use App\Controllers\HomeController;
+use Core\Router;
 
-$routes = [
-    '/' => [HomeController::class, 'index'],
-    '/about' => [AboutController::class, 'index'],
-];
+$router = new Router();
+
+$router->get('/', [HomeController::class, 'index']);
+$router->get('/about', [AboutController::class, 'index']);
+
+return $router;
