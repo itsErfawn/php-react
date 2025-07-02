@@ -10,7 +10,7 @@ class HomeController extends Controller
             'props' => [
                 'message' => 'سلام از کنترلر PHP + MVC',
                 'data'=>[
-                    "ErFaN","Sepehr","Amir"
+                    "react","vite","inertia","php"
                 ]
             ],
             'url' => $_SERVER['REQUEST_URI'],

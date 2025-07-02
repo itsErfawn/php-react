@@ -7,15 +7,13 @@ interface Props {
 
 export default function Home({ message }: Props) {
   const {data}=usePage().props
+  console.log(data);
   return (
     <div>
       <h1 className='bg-red-400 text-white'>{message}</h1>
       <p>Welcome to Inertia + PHP MVC + TypeScript setup</p>
       <Link href="/about">go to about</Link>
       <p>sss</p>
-      {data.map(item=>(
-        <p>{item}</p>
-      ))}
     </div>
   );
 }
